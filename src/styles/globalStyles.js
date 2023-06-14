@@ -33,13 +33,14 @@ export const GlobalStyles = createGlobalStyle`
 export const GlobalStyles = createGlobalStyle`
 
 * {
-  margin: 15px 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,5 +50,20 @@ body {
 
 h1, h3, h4, h5, h6 {
   font-family: ${({ theme }) => theme.font.family.secondary};
+  margin: ${({ theme }) => theme.spacings.large} 0;
+}
+
+p {
+  margin: ${({ theme }) => theme.spacings.medium} 0;
+}
+
+ul, ol {
+  margin: ${({ theme }) => theme.spacings.medium};
+  padding: ${({ theme }) => theme.spacings.medium};
+}
+
+a {
+  color: ${({ theme }) => theme.colors.secondaryColor};
+  text-decoration: none;
 }
 `;

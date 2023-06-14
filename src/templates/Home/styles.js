@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
 /* COMECANDO COM STYLED COMPONENTS
+import styled, { css } from 'styled-components';
 // Pegando props do styled wrapper
 // export const Wrapper = styled.div`
 //   ${props => css`
@@ -14,3 +14,9 @@ import styled, { css } from 'styled-components';
 //   `}
 // `;
 */
+
+import styled, { css } from 'styled-components';
+
+export const Wrapper = styled.div`
+  ${({ theme }) => css``}
+`;
