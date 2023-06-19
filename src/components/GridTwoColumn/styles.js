@@ -22,6 +22,7 @@ export const TextContainer = styled.div`
   ${({ theme }) => css`
     @media ${theme.media.ltemedium} {
       margin-bottom: ${theme.spacings.large};
+      margin-top: ${theme.spacings.large};
     }
   `}
 `;

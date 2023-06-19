@@ -4,6 +4,7 @@ import { Container as TextComponent } from '../TextComponent/styles';
 
 export const Container = styled.div`
   ${({ theme }) => css`
+    margin-top: 3rem;
     ${TextComponent} {
       margin-bottom: ${theme.spacings.xhuge};
     }

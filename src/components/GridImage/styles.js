@@ -4,6 +4,7 @@ import { Container as TextComponent } from '../TextComponent/styles';
 
 export const Container = styled.div`
   ${({ theme }) => css`
+    margin-top: 3rem;
     > ${TextComponent} {
       margin-bottom: ${theme.spacings.xhuge};
     }
@@ -32,6 +33,7 @@ export const Image = styled.img`
   ${({ theme }) => css`
     width: 100%;
     transition: all 300ms ease-in-out;
+    height: 40rem;
 
     &:hover {
       transform: scale(1.2);

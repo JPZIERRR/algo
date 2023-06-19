@@ -15,12 +15,18 @@ export const Container = styled.div`
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 0.1rem solid ${theme.colors.mediumGray};
     background: ${theme.colors.white};
+    display: flex;
+    justify-content: space-between;
 
     ${SectionContainer} {
       padding-top: 0;
       padding-bottom: 0;
+    }
+
+    & ${Heading} {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     @media ${theme.media.lteMedium} {
@@ -29,7 +35,7 @@ export const Container = styled.div`
       opacity: 0;
       ${visible && menuVisible(theme)}
 
-      ${SectionContainer} {
+      > ${SectionContainer} {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -38,7 +44,7 @@ export const Container = styled.div`
         overflow-y: auto;
       }
 
-      ${Heading} {
+      & ${Heading} {
         padding-bottom: ${theme.spacings.large};
         display: flex;
         justify-content: center;
@@ -66,7 +72,7 @@ export const Button = styled.button`
     z-index: 6;
     position: fixed;
     top: 2rem;
-    right: 4rem;
+    right: 2rem;
     width: 4rem;
     height: 4rem;
     background: ${theme.colors.primaryColor};
@@ -74,12 +80,12 @@ export const Button = styled.button`
     border: none;
     display: none;
     border-radius: 0.8rem;
+    pointer-events: ${visible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {
       display: flex;
       align-items: center;
       justify-content: center;
-      pointer-events: ${visible ? 'none' : 'all'};
     }
 
     svg {

@@ -8,12 +8,11 @@ export const Container = styled.a`
     padding: ${theme.spacings.small};
     color: ${theme.colors.primaryColor};
     position: relative;
-    height: 6rem;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 20%;
+      bottom: 0.76rem;
       left: 50%;
       width: 0;
       height: 0.2rem;

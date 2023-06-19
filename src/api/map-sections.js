@@ -91,8 +91,6 @@ export const mapImageGrid = function (section = {}) {
     image_grid: grid = [],
   } = section;
 
-  console.log(section);
-
   return {
     component: 'section.section-grid-image',
     title,
@@ -100,11 +98,8 @@ export const mapImageGrid = function (section = {}) {
     background,
     sectionId,
     grid: grid.map(img => {
-      const {
-        image: { url: srcImg = '', alternativeText: altText = '' } = '',
-      } = img;
+      const { url: srcImg = '', alternativeText: altText = '' } = img;
 
-      console.log(srcImg);
       return {
         srcImg,
         altText,

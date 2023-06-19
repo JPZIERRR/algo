@@ -5,6 +5,7 @@ export const Container = styled.div`
     max-width: 58rem;
     margin: 0 auto;
     text-align: center;
+    margin-top: 3rem;
   `}
 `;
 
